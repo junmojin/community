@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Test List</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
 </head>
 <body>
-$END$
+<h1 style="text-align: center;">Test List</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Note</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Iterate over the tests list -->
+  <tr th:each="test : ${testList}">
+    <td th:text="${test.id}"></td>
+    <td th:text="${test.note}"></td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>
