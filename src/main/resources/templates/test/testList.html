@@ -25,6 +25,7 @@
   <tr>
     <th>ID</th>
     <th>Note</th>
+    <th>Date</th>
   </tr>
   </thead>
   <tbody>
@@ -32,6 +33,7 @@
   <tr th:each="test : ${testList}">
     <td th:text="${test.id}"></td>
     <td th:text="${test.note}"></td>
+    <td th:text="${test.createdAt}"></td>
   </tr>
   </tbody>
 </table>
