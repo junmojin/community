@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Test List</title>
+  <title>게시판 목록</title>
   <style>
     table {
       width: 50%;
@@ -19,7 +19,7 @@
   </style>
 </head>
 <body>
-<h1 style="text-align: center;">Test List</h1>
+<h1 style="text-align: center;">게시판 목록</h1>
 <table>
   <thead>
   <tr>
@@ -30,10 +30,10 @@
   </thead>
   <tbody>
   <!-- Iterate over the tests list -->
-  <tr th:each="test : ${testList}">
-    <td th:text="${test.id}"></td>
-    <td th:text="${test.note}"></td>
-    <td th:text="${test.createdAt}"></td>
+  <tr th:each="board : ${boardList}">
+    <td th:text="${board.id}"></td>
+    <td th:text="${board.note}"></td>
+    <td th:text="${board.createdAt}"></td>
   </tr>
   </tbody>
 </table>
